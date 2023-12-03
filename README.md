@@ -34,7 +34,7 @@
         - `05. model_depthv2.py` contains the PhISHNet model.
         - `06. utils.py` containing PhISHNet utility files. 
         - `07. load_raw.py` contains loading utilities. 
-        - `08. perceptual_losses.py` contains code for $L_{FID}$
+        - `08. perceptual_losses.py` contains code for $L_{FID}$. (Refer [UEGAN](https://arxiv.org/pdf/2012.15020.pdf))
         - `09. warp.py` containing the warping utility functions.
         - `10. slice.py` contains utility functions to implement the bilateral grid-based upsampler.
         - `11. metrics.py` contains utilities for the metrics.
