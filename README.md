@@ -21,11 +21,11 @@
             - `CMP/predict_optical_flow.py` to predict OF on images with size $D_h$.
             - `CMP/predict_optical_flow_low.py` to predict OF on images with size $D_l$.
         - `metrics/`
-            - `fastvqa` - use `vqa.py`.
-            - `niqe` - use `niqe_metric.m`.     
-            - `pcqi` - use `evaluate.m`.     
-            - `uiqm` - use `demo_UIQM.m`.     
-            - `vsfa` - use `test_demo.py`.     
+            - `fastvqa` - use `vqa.py` to obtain the [Fast-VQA and FasterVQA](https://github.com/VQAssessment/FAST-VQA-and-FasterVQA) metrics.
+            - `niqe` - use `niqe_metric.m` to obtain the [NIQE](https://in.mathworks.com/help/images/ref/niqe.html) metric.     
+            - `pcqi` - use `evaluate.m` to obtain the [PCQI](https://ieeexplore.ieee.org/document/7289355) metric.     
+            - `uiqm` - use `demo_UIQM.m` to obtain the [UIQM](https://ieeexplore.ieee.org/document/7305804) metric.     
+            - `vsfa` - use `test_demo.py` to obtain the [VSFA](https://github.com/lidq92/VSFA/tree/master) metric.     
         - `outputs/` - contains sample outputs for a video from the VDD-C Dataset.
         - `01. train_PhishNet.py` and `train_PhishVideo.py` are the training scripts.
         - `02. test_PhishVideo.py` to test the model from a `.ckpt` file. Use `--legacy=True` for PhishNet.
@@ -47,10 +47,12 @@
 ## Notes
 
 - Prepare your training data and put images from $\mathcal{I}$ in `./src/data` and $\mathcal{V}$ in `./src/uw_video/` in the folder `images`.
+- Overall, you would need three different environments, for `ffn`, `llve` and `slowtv` respectively. Follow the official repositories for instructions.
 - To predict plausible OF for $\mathcal{I}$, first generate the object masks using instance segmentation from `src/llve/etc/` using [Detectron2](https://github.com/facebookresearch/detectron2) and generate the OF using the pretrained [CMP](https://github.com/XiaohangZhan/conditional-motion-propagation) model in `src/llve/etc/CMP/` by downloading the CMP checkpoint to `src/llve/etc/CMP/experiments/semiauto_annot/resnet50_vip+mpii_liteflow/checkpoints/`.
 - To generate the OF for $\mathcal{V}$, use the [FastFlowNet](https://github.com/ltkong218/FastFlowNet) model in `ffn` by downloading the checkpoints `FAST_VQA_3D_1*1.pth` and `FAST_VQA_B_1*4.pth` to `src/llve/metrics/FAST-VQA-and-FasterVQA/pretrained_weights/`.
 - To generate depthmaps for $\mathcal{V}$, use the [SlowTV_Monodepth model](https://github.com/jspenmar/slowtv_monodepth/tree/main/src) at `src/slowtv` by downloading the `kbr.ckpt` checkpoint to `src/slowtv/api/quickstart/`.
-- Finally train the model with `src/llve/train_PhishNet.py` or `src/llve/train_PhishVideo.py`
+- Finally train the model with `src/llve/train_PhishNet.py` or `src/llve/train_PhishVideo.py`.
+- 
 
 ## Authors
 * [Aditya C](mailto:adichand20@gmail.com), Department of Electrical and Communication Engineering, IISc Bangalore.
