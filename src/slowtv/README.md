@@ -29,26 +29,6 @@ This repository contains the code associated with the following publications:
 > We have organized several monocular depth prediction challenges around the proposed SYNS-Patches dataset.
 > Check the [MDEC](https://jspenmar.github.io/MDEC/) website for details on previous editions! 
 
-<p align="center">
-<img src="./assets/syns/image_0026.png" alt="image_0026"  width="32%"/>
-<img src="./assets/syns/image_0254.png" alt="image_0254"  width="32%"/>
-<img src="./assets/syns/image_0698.png" alt="image_0698"  width="32%"/>
- 
-<img src="./assets/syns/depth_0026.png" alt="depth_0026"  width="32%"/>
-<img src="./assets/syns/depth_0254.png" alt="depth_0254"  width="32%"/>
-<img src="./assets/syns/depth_0698.png" alt="depth_0698"  width="32%"/>
-</p>
-
-<p align="center">
-<img src="./assets/slowtv/00_natural.png" alt="image_0026"  width="32%"/>
-<img src="./assets/slowtv/00_driving.png" alt="image_0254"  width="32%"/>
-<img src="./assets/slowtv/00_underwater.png" alt="image_0698"  width="32%"/>
- 
-<img src="./assets/slowtv/03_natural.png" alt="depth_0026"  width="32%"/>
-<img src="./assets/slowtv/03_driving.png" alt="depth_0254"  width="32%"/>
-<img src="./assets/slowtv/03_underwater.png" alt="depth_0698"  width="32%"/>
-</p>
-
 ---
 
 ## Project Structure
